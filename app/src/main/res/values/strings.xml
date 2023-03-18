@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Alert Dialog Box</string>
+    <string name="showMessage">Message sent Successfully</string>
+    <string name="test_message">Test Message</string>
+    <string name="this_icon_i_am_used_user_successfully_message">This icon I am used user successfully Message</string>
+    <string name="create_toast">Create Toast</string>
+    <string name="todo">TODO</string>
+    <string name="ok">Ok</string>
+    <string name="your_order_has_successfully_placed">Your Order has successfully placed!</string>
+    <string name="success">Success</string>
+    <string name="exit_alert_dialog">Exit Alert Dialog</string>
+    <string name="order_alert_dialog">Order Alert Dialog</string>
 </resources>

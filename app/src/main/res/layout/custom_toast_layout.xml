@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C63FF"
+    android:gravity="center"
+    android:padding="11dp"
+    android:id="@+id/viewContainer">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_baseline_cloud_done_24"
+        android:contentDescription="@string/this_icon_i_am_used_user_successfully_message"
+    />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:text="@string/test_message"
+        android:layout_marginStart="10dp"
+    />
+</LinearLayout>
