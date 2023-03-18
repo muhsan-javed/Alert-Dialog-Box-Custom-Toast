@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         delDialog.setTitle("Delete");
         delDialog.setIcon(R.drawable.ic_baseline_delete_24);
         delDialog.setMessage("Are you sure..");
-
         delDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
