@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Item Not Deleted", Toast.LENGTH_SHORT).show();
             }
         });
-        delDialog.show();
+        //delDialog.show();
 
 
         // Create Custom Dialog
@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
             });
             dialog.show();
 
+        });
+
+        mainBinding.btnFragment.setOnClickListener(view -> {
+            FragmentAlertDialog alertDialog = new FragmentAlertDialog();
+//            alertDialog.setCancelable(false);
+            alertDialog.show(getSupportFragmentManager(), "FragmentDialog");
         });
     }
 
