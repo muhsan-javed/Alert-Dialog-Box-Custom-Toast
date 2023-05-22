@@ -16,7 +16,6 @@ public class FragmentAlertDialog extends DialogFragment {
     public static final String TAG = "TAG";
     private final String[] mColors={"Red", "Green","Blue","Yellow"};
     private String selectedValue = null;
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
