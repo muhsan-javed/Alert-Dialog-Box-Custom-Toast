@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.material.textview.MaterialTextView;
 import com.muhsantech.alertdialogbox.databinding.ActivityMainBinding;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -117,6 +118,14 @@ public class MainActivity extends AppCompatActivity {
             FragmentAlertDialog alertDialog = new FragmentAlertDialog();
 //            alertDialog.setCancelable(false);
             alertDialog.show(getSupportFragmentManager(), "FragmentDialog");
+        });
+
+        mainBinding.btnFancyToast.setOnClickListener(v -> {
+            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.SUCCESS,false).show();
+            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.WARNING,false).show();
+            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.INFO,true).show();
+            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.DEFAULT,true).show();
+            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
         });
     }
 
