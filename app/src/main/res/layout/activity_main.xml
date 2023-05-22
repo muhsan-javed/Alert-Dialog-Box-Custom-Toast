@@ -13,7 +13,7 @@
             android:id="@+id/btnToast"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/custom_button_bg"
             android:text="@string/create_toast"
             android:textColor="@color/white"
@@ -52,7 +52,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnToast"
             tools:ignore="MissingConstraints" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFragment"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -65,11 +65,10 @@
             app:layout_constraintStart_toStartOf="@+id/order"
             app:layout_constraintTop_toBottomOf="@+id/order" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFancyToast"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_button_bg"
             android:text="Fancy Toast"
             android:textColor="@color/white"
             android:layout_marginTop="10dp"
@@ -77,6 +76,51 @@
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnFragment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sweet_alert"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="sweet alert"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFancyToast" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sweet_alert_Error"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Error"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sweet_alert" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/WARNING_TYPE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="WARNING"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sweet_alert_Error" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/CUSTOM_IMAGE_TYPE"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="CUSTOM IMAGE"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WARNING_TYPE" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

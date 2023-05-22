@@ -7,15 +7,19 @@ import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
 
+import com.codezal.sweetalert.SweetAlertDialog;
 import com.google.android.material.textview.MaterialTextView;
 import com.muhsantech.alertdialogbox.databinding.ActivityMainBinding;
 import com.shashank.sony.fancytoastlib.FancyToast;
+
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -126,6 +130,44 @@ public class MainActivity extends AppCompatActivity {
             FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.INFO,true).show();
             FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.DEFAULT,true).show();
             FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
+        });
+
+        // Sweet Alert Code
+        mainBinding.sweetAlert.setOnClickListener(v -> {
+            SweetAlertDialog pDialog = new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE);
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.setTitleText("Loading");
+            pDialog.setCancelable(false);
+            pDialog.show();
+        });
+        mainBinding.sweetAlertError.setOnClickListener(v -> {
+            new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Oops...")
+                    .setContentText("Something went wrong!")
+                    .show();
+        });
+        mainBinding.WARNINGTYPE.setOnClickListener(v -> {
+            new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("Are you sure?")
+                    .setContentText("Won't be able to recover this file!")
+                    .setCancelText("No,cancel plx!")
+                    .setConfirmText("Yes,delete it!")
+                    .showCancelButton(true)
+                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
+                            sDialog.cancel();
+                        }
+                    })
+                    .show();
+        });
+
+        mainBinding.CUSTOMIMAGETYPE.setOnClickListener(v -> {
+            new SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                    .setTitleText("Sweet!")
+                    .setContentText("Here's a custom image.")
+                    .setCustomImage(R.drawable.pic_save)
+                    .show();
         });
     }
 

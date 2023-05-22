@@ -43,8 +43,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'com.airbnb.android:lottie:6.0.0'
-
+    //Fancy Toast Library
     implementation 'io.github.shashank02051997:FancyToast:2.0.2'
+//    //Sweet AlertDialog
+//    implementation 'cn.pedant.sweetalert:library:1.3'
+    implementation 'com.github.securedeveloper:SweetAlert:0.1.0'
 
 
 }
