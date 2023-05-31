@@ -94,12 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Toast.makeText(MainActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
             }
-        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(MainActivity.this, "Item Not Deleted", Toast.LENGTH_SHORT).show();
-            }
-        });
+        }).setNegativeButton("No", (dialogInterface, i) -> Toast.makeText(MainActivity.this, "Item Not Deleted", Toast.LENGTH_SHORT).show());
         //delDialog.show();
 
 
