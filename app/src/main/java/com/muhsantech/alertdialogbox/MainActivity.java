@@ -1,10 +1,5 @@
 package com.muhsantech.alertdialogbox;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.cardview.widget.CardView;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -13,19 +8,21 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.codezal.sweetalert.SweetAlertDialog;
 import com.google.android.material.textview.MaterialTextView;
 import com.muhsantech.alertdialogbox.databinding.ActivityMainBinding;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
-
-
-
+// Completed Project Alert DialogBox Practice
 public class MainActivity extends AppCompatActivity {
 
     //Button order, btnExit;
     ActivityMainBinding mainBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             MaterialTextView txtMsg = viewT.findViewById(R.id.txtMsg); // Find ID
             txtMsg.setText(R.string.showMessage); // Set Your Message
             toast.setDuration(Toast.LENGTH_LONG); // Set Toast Duration
-            toast.setGravity(Gravity.CENTER, 0,0); // Set Toast Gravity
+            toast.setGravity(Gravity.CENTER, 0, 0); // Set Toast Gravity
             toast.show(); // this very Import method you cannot write this method, Not show TOAST.......
         });
 
@@ -69,19 +66,18 @@ public class MainActivity extends AppCompatActivity {
                 }).show());
 
         // Single Button Dialog Box
-       /**
-       AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle("Terms & Conditions");
-        alertDialog.setIcon(R.drawable.ic_baseline_info_24);
-        alertDialog.setMessage("Here you read all the T & C");
-        alertDialog.setButton("Yes, I've Read", new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(MainActivity.this, "Yes, You can proceed now..", Toast.LENGTH_SHORT).show();
-            }
+        /**
+         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+         alertDialog.setTitle("Terms & Conditions");
+         alertDialog.setIcon(R.drawable.ic_baseline_info_24);
+         alertDialog.setMessage("Here you read all the T & C");
+         alertDialog.setButton("Yes, I've Read", new DialogInterface.OnClickListener(){
+        @Override public void onClick(DialogInterface dialogInterface, int i) {
+        Toast.makeText(MainActivity.this, "Yes, You can proceed now..", Toast.LENGTH_SHORT).show();
+        }
         });
 
-        alertDialog.show();**/
+         alertDialog.show();**/
 
 
         // Two Button AlertDialog
@@ -120,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mainBinding.btnFancyToast.setOnClickListener(v -> {
-            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.SUCCESS,false).show();
-            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.WARNING,false).show();
-            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.INFO,true).show();
-            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_SHORT,FancyToast.DEFAULT,true).show();
-            FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
+            FancyToast.makeText(this, "Hello World !", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
+            FancyToast.makeText(this, "Hello World !", FancyToast.LENGTH_SHORT, FancyToast.WARNING, false).show();
+            FancyToast.makeText(this, "Hello World !", FancyToast.LENGTH_SHORT, FancyToast.INFO, true).show();
+            FancyToast.makeText(this, "Hello World !", FancyToast.LENGTH_SHORT, FancyToast.DEFAULT, true).show();
+            FancyToast.makeText(this, "Hello World !", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
         });
 
         // Sweet Alert Code
