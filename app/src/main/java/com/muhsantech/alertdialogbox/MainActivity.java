@@ -11,11 +11,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.codezal.sweetalert.SweetAlertDialog;
 import com.google.android.material.textview.MaterialTextView;
 import com.muhsantech.alertdialogbox.databinding.ActivityMainBinding;
 import com.shashank.sony.fancytoastlib.FancyToast;
+
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
 // Completed Project Alert DialogBox Practice
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
+
 
 //        order = findViewById(R.id.button);
 //        btnExit = findViewById(R.id.btnExit);
